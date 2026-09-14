@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "name": "Spawning",
+    "maps": [
+        {
+            "name": "player",
+            "id": "3ebec912-25c6-4a35-921f-718754ed88d4",
+            "actions": [
+                {
+                    "name": "SpawnCircle",
+                    "type": "Button",
+                    "id": "99af3563-6a1a-415b-b447-5d92f3e7fa7e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnTriangle",
+                    "type": "Button",
+                    "id": "6294202c-4454-4bd0-88bf-a59cec41c949",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnHex",
+                    "type": "Button",
+                    "id": "7d9492bc-f7d8-4cef-b3bc-b69885bc2bf6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnRandomHex",
+                    "type": "Button",
+                    "id": "19daaf2c-792a-4c29-a56a-8270e38cbdc5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1aec6ade-c1c6-4d99-8782-452f15158415",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnCircle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8091e00f-2669-43b6-a060-df37bec1f65a",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnTriangle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86b74f0c-01c6-4c07-a353-d187552fefba",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnHex",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e80c949c-043b-468a-b05a-1efe3cb8c061",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnRandomHex",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

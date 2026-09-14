@@ -89,4 +89,10 @@ public class player : MonoBehaviour
         //if(collision.CompareTag("Bullet"))
         
     }
+
+    void OnSpawnBullet()
+    {
+
+    }
+
 }
