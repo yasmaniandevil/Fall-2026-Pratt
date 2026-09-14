@@ -1,0 +1,115 @@
+{
+    "version": 1,
+    "name": "Spawning",
+    "maps": [
+        {
+            "name": "player",
+            "id": "b6daab7c-db97-4a16-b8ec-b30755e5fe5b",
+            "actions": [
+                {
+                    "name": "SpawnCircle",
+                    "type": "Button",
+                    "id": "2547c177-f7be-4f1d-acea-4688723279aa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnTriangle",
+                    "type": "Button",
+                    "id": "897de4d2-fc24-43d3-b381-e6f654b1c071",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnHex",
+                    "type": "Button",
+                    "id": "84c1d639-7a40-4a91-8823-dab386f0e079",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnRandomHex",
+                    "type": "Button",
+                    "id": "feaf03b7-41c1-4009-8ca7-b7faae376860",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnBullet",
+                    "type": "Button",
+                    "id": "3e143507-ddb9-4fe8-ad97-b5c04cb06c19",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0a1c8c45-86e0-478f-ad97-f209d6e63c6a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnCircle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b7eb5cff-2b4e-42d6-9a0e-1823c5d271b1",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnTriangle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "045325ca-a0bc-4991-9fbe-adf8ec459d64",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnHex",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ded15e72-d1da-446a-b122-c28d3cdc621d",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnRandomHex",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d663c84-0bf6-4ef6-bc8d-61e8c062ec43",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnBullet",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
