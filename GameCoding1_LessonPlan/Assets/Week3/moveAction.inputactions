@@ -32,6 +32,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "HandleDialogue",
+                    "type": "Button",
+                    "id": "8971c67b-b7dd-4c95-9a24-469677ee65b4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -111,8 +120,25 @@
                     "action": "SpawnBullet",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a52601aa-6b15-4761-b93c-052df2a2223e",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleDialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "c7cfa612-8a8f-4380-8ef8-8ac994841a20",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []
