@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class dog : MonoBehaviour
+public class SceneChange : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
