@@ -25,7 +25,12 @@ public class playerEvent : MonoBehaviour
     public Transform groundCheck;
     //the feet are in a circle, anything within the circle counts as grounding
     private float groundCheckRadius = 0.2f;
-    public Score scoreScript;
+
+
+    //made public the gameobject that holds the score script
+    public GameObject uiHolder;
+    //Score is our script! we are creating a reference to it so we can grab a function from it
+    private Score scoreScript;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,6 +38,21 @@ public class playerEvent : MonoBehaviour
     {
         //grab the rigidbody off of the player and store it inside this variable
         rb2d = GetComponent<Rigidbody2D>();
+
+        //ui holder is the game object that has my score script on it
+        //here im saying from this specific game object, grab my score script
+        //and assign it to my score script variable
+        //if we have something in the inspector
+        if(uiHolder != null)
+        {
+            //then actually grab it, if we do not have anything it will not grab it
+            scoreScript = uiHolder.GetComponent<Score>();
+
+        }//could have done else instead
+        if(uiHolder == null)
+        {
+            Debug.Log("forgot to put uiHolder in the inspector");
+        }
 
     }
 
@@ -83,13 +103,18 @@ public class playerEvent : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("hit enemy");
+            scoreScript.AddScore(-1);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if it is this tagged object
-        scoreScript.AddScore(1);
+        if (collision.CompareTag("Coin"))
+        {
+            scoreScript.AddScore(1); //when we collect a coin it will make our score go up
+            Destroy(collision.gameObject);//destroy the coin afterwards
+            Debug.Log("coin collected");
+        }
         
     }
 
