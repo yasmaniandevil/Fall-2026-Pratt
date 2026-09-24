@@ -35,7 +35,7 @@ public class ObjectMover : MonoBehaviour
         Vector3 moveDir = Vector3.right;
         float moveDistance = 2f;
         float moveSpeed = .5f;
-
+        
         float t = Mathf.PingPong(Time.time * moveSpeed, 1f);
         Vector3 offset = moveDir.normalized * (t * moveDistance);
         transform.position = startPos + offset;
