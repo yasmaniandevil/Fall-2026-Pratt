@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6111773171678713119}
   - component: {fileID: 7248139735497579503}
   - component: {fileID: 4016705368128740165}
+  - component: {fileID: 5251329479447395000}
   m_Layer: 0
   m_Name: SpherePrefab
-  m_TagString: Untagged
+  m_TagString: SpherePrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,3 +113,16 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5251329479447395000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393857555091639022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75039143dbaff4d63b1c13db5b4952a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectMover
+  functionName: PingPong
