@@ -27,7 +27,7 @@ public class PlayerOne : MonoBehaviour
     void FixedUpdate()
     {
         rb2d.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
-        Debug.Log("movement");
+        //Debug.Log("movement");
     }
     
 
