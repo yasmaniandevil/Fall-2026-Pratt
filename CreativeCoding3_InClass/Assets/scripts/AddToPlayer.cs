@@ -6,6 +6,7 @@ public class AddToPlayer : MonoBehaviour
     //we need a reference to the score script so that we can use AddScore Function
     //so Score below is OUR SCRIPT
     private Score scoreScript;
+    private AudioSource gameAudio;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,7 @@ public class AddToPlayer : MonoBehaviour
         //so this means UI holder is the GAMEOBJECT that has score script attached to
         //we first need to say the gameobject then GET COMPNENT
         scoreScript = uiHolder.GetComponent<Score>();
+        gameAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class AddToPlayer : MonoBehaviour
         //other is the thing that we are hitting(which will be our cubeprefab)
         if (other.CompareTag("CubePrefab"))
         {
+            gameAudio.Play();
             //Debug.Log("hit obstacle");
             //this is our score script, we are accessing our function called add scored
             scoreScript.AddScore(1);
