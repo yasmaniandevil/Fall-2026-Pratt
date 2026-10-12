@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Player1
   - Player2
+  - Key
   layers:
   - Default
   - TransparentFX
