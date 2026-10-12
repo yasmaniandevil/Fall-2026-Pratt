@@ -23,7 +23,7 @@ public class PlayerOne : MonoBehaviour
     {
         //our movement code
         rb2d.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
-        Debug.Log("moving player one");
+        //Debug.Log("moving player one");
     }
 
     
