@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 // INVENTORY
-// Put this on your Player (the same GameObject that has CCPlayer).
+// Put this on your Player (the same GameObject that has PlayerInteract).
 // It keeps a list of every item the player has picked up.
 //
 // OPTIONAL: drag a TextMeshPro text from your Canvas into "Inventory Text"
@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
 
     //ADVANCED (optional): other scripts can listen for this event,
     //like a script that plays a sound every time you pick something up.
-    //works the same way as OnDialogueRequested in CCPlayer.
+    //works the same way as OnDialogueRequested in PlayerInteract.
     public static event Action<ItemData> OnItemAdded;
 
     void Start()
@@ -59,7 +59,7 @@ public class Inventory : MonoBehaviour
     //returns true if we are carrying this item, false if we aren't
     //
     //example of using this in another interactable script:
-    //   Inventory inventory = ccplayer.GetComponent<Inventory>();
+    //   Inventory inventory = player.GetComponent<Inventory>();
     //   if (inventory != null && inventory.HasItem(requiredItem))
     //   {
     //       //open the door!

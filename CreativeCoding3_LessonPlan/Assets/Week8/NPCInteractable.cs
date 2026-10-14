@@ -1,18 +1,23 @@
-
 using UnityEngine;
+
+// NPC
+// Put this on any character you want the player to talk to.
+// The object needs a Collider so the player can find it.
+// Drag a Dialogue Data asset into "Dialogue".
 
 public class NPCInteractable : Interactable
 {
-    public NPCData npcData;
+    public DialogueData dialogue;
 
-    public override void Interact(AddToPlayerInteract player)
+    public override void Interact(PlayerInteract player)
     {
-        if(npcData == null)
+        if (dialogue == null)
         {
-            Debug.Log("npc has no data: " + gameObject.name);
+            Debug.LogWarning(gameObject.name + " has no Dialogue Data. Drag one in.");
+            return;
         }
 
-        //if we are interacting with the npc and it has data then request dialogue 
-        player.RequestDialogue(npcData);
+        //if we are interacting with the npc and it has dialogue, request it
+        player.RequestDialogue(dialogue);
     }
 }

@@ -2,9 +2,9 @@ using UnityEngine;
 
 // PICKUP
 // Put this on any 3D object you want the player to pick up.
-// The object needs a Collider so the player's look ray can hit it.
+// The object needs a Collider so the player can find it.
 //
-// Look at the object (reticle turns red), press Interact,
+// Look at it (first person) or walk up to it (third person), press the interact key,
 // and it does whatever boxes you checked in the Inspector.
 //
 // EXAMPLES:
@@ -24,8 +24,8 @@ public class PickupInteractable : Interactable
     [Tooltip("Shows a dialogue box after pickup. Fill in Pickup Dialogue below.")]
     public bool showDialogue = false;
 
-    [Tooltip("Any NPCData asset works here. Put the item's name as the Display Name.")]
-    public NPCData pickupDialogue;
+    [Tooltip("A Dialogue Data asset. Put the item's name as the Display Name.")]
+    public DialogueData pickupDialogue;
 
     [Tooltip("Removes the object from the world after pickup.")]
     public bool disappearAfterPickup = true;
@@ -36,7 +36,7 @@ public class PickupInteractable : Interactable
     //3. uncomment the matching lines in Interact()
     //public AudioClip pickupSound;
 
-    public override void Interact(AddToPlayerInteract player)
+    public override void Interact(PlayerInteract player)
     {
         //1. ADD TO INVENTORY
         if (addToInventory)
@@ -66,7 +66,7 @@ public class PickupInteractable : Interactable
             else
             {
                 Debug.LogWarning("Show Dialogue is checked on " + gameObject.name +
-                                 ", but Pickup Dialogue is empty. Drag in an NPCData asset.");
+                                 ", but Pickup Dialogue is empty. Drag in a Dialogue Data asset.");
             }
         }
 

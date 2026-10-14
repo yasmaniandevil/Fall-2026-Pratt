@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e3acc26732b4dd49bb2aa9e65a224d, type: 3}
-  m_Name: PickupDia
-  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  m_Script: {fileID: 11500000, guid: bd48ad7af664d4620a3c20c8d145a836, type: 3}
+  m_Name: WithoutBook
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   displayName: 
-  placeHolderOpeningLine: 
+  lines:
+  - You need the book first!
