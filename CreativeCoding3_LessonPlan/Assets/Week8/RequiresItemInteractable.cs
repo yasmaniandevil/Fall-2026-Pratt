@@ -6,9 +6,10 @@ using UnityEngine.Events;
 // The object needs a Collider so the player can find it.
 //
 // EXAMPLES:
-// Locked door:  needs a key, says "It's locked" without it, door disappears with it
-// Quest NPC:    "Have you seen my cat?" without it, "You found her!" with it
-// Chest:        needs a key, turns on a hidden treasure object with it
+// Locked door:   needs a key, says "It's locked" without it, door disappears with it
+// Locked pickup: needs the book before you can take the key (Item To Give = key)
+// Quest NPC:     "Have you seen my cat?" without it, "You found her!" with it
+// Chest:         needs a key, turns on a hidden treasure object with it
 //
 // HOW "ON SUCCESS" WORKS:
 // It's the same box a UI Button uses for On Click. Click +, drag in any object
@@ -23,8 +24,15 @@ public class RequiresItemInteractable : Interactable
     [Header("What item does this need?")]
     public ItemData requiredItem;
 
-    [Tooltip("Takes the item out of the inventory when it's used, like using up a key")]
+    [Tooltip("Takes the required item out of the inventory when it's used, like using up the book")]
     public bool removeItemWhenUsed = true;
+
+    [Header("What gets added to the inventory? (optional)")]
+    [Tooltip("Gets added to the inventory when it works, like the key. Leave empty for doors, NPCs, etc.")]
+    public ItemData itemToAdd;
+
+    [Tooltip("Removes this object from the world when it works, like picking up the key")]
+    public bool disappearAfterSuccess = false;
 
     [Header("Dialogue (all optional)")]
     [Tooltip("Shows when the player DOESN'T have the item")]
@@ -34,7 +42,7 @@ public class RequiresItemInteractable : Interactable
     public DialogueData dialogueWithItem;
 
     [Tooltip("Shows if the player interacts again after it already worked")]
-    public DialogueData dialogueAfterDone;
+    public DialogueData dialogueAfterComplete;
 
     [Header("What happens when the player has the item?")]
     public UnityEvent onSuccess;
@@ -47,7 +55,7 @@ public class RequiresItemInteractable : Interactable
         //ALREADY DONE: don't do it again
         if (isDone)
         {
-            if (dialogueAfterDone != null) player.RequestDialogue(dialogueAfterDone);
+            if (dialogueAfterComplete != null) player.RequestDialogue(dialogueAfterComplete);
             return;
         }
 
@@ -69,14 +77,22 @@ public class RequiresItemInteractable : Interactable
         if (inventory.HasItem(requiredItem))
         {
             isDone = true;
-
-            if (removeItemWhenUsed) inventory.RemoveItem(requiredItem);
-            if (dialogueWithItem != null) player.RequestDialogue(dialogueWithItem);
-
             Debug.Log("Used " + requiredItem.itemName + " on " + gameObject.name);
 
-            //run everything in the On Success box
+            //1. take the required item away (if checked)
+            if (removeItemWhenUsed) inventory.RemoveItem(requiredItem);
+
+            //2. give the new item (if there is one)
+            if (itemToAdd != null) inventory.AddItem(itemToAdd);
+
+            //3. show dialogue
+            if (dialogueWithItem != null) player.RequestDialogue(dialogueWithItem);
+
+            //4. run everything in the On Success box
             onSuccess.Invoke();
+
+            //5. disappear (if checked)
+            if (disappearAfterSuccess) Destroy(gameObject);
         }
         else
         {

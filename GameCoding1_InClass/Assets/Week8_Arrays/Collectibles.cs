@@ -17,6 +17,7 @@ public class Collectibles : MonoBehaviour
         for(int i = 0; i < collectibesPrefabs.Length; i++)
         {
             Instantiate(collectibesPrefabs[i], spawnPosition[i], Quaternion.identity);
+     
         }
         
     }

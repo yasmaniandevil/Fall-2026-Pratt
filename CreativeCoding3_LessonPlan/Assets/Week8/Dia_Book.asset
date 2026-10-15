@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b7229dbf1bc4b25ae4e6250c4d1c8b, type: 3}
-  m_Name: InventoryItem
-  m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Book
-  icon: {fileID: 0}
-  description: 
+  m_Script: {fileID: 11500000, guid: bd48ad7af664d4620a3c20c8d145a836, type: 3}
+  m_Name: Dia_Book
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  displayName: John
+  lines:
+  - Hi how r u john
+  - would u like to build a snow man?

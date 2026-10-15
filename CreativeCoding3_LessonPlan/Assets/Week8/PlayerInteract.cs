@@ -25,6 +25,8 @@ public class PlayerInteract : MonoBehaviour
     [Header("Controls")]
     [Tooltip("The key that interacts and moves dialogue forward")]
     public Key interactKey = Key.E;
+    [Tooltip("Hides the mouse cursor and keeps it in the game window. Press Esc to get it back, click the game to hide it again.")]
+    public bool lockCursor = true;
 
     [Header("First person settings")]
     public Transform playerCamera;
@@ -76,9 +78,16 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        if (lockCursor) LockCursor();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        HandleCursor();
+
         bool interactPressed = interactAction.WasPressedThisFrame();
 
         //IF DIALOGUE IS OPEN: the key moves dialogue forward instead of interacting
@@ -215,6 +224,30 @@ public class PlayerInteract : MonoBehaviour
         if (interactPrompt != null)
         {
             interactPrompt.SetActive(currentInteractable != null);
+        }
+    }
+
+    //hides the cursor and keeps it locked in the middle of the game window
+    void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    //Esc shows the cursor (so you can click out of the game), clicking the game hides it again
+    void HandleCursor()
+    {
+        if (!lockCursor) return;
+
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else if (Cursor.lockState != CursorLockMode.Locked &&
+                 Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            LockCursor();
         }
     }
 
