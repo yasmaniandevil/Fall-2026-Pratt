@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TeleportPlayer : MonoBehaviour
+public class Torodial : MonoBehaviour
 {
     //create four box colliders
     //each one lines the top, bottom, left and right

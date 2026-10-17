@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &417455405312977190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1906201369626329652, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_Name
+      value: Player1VSeeker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.44059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24538
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798300905150147128, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 842bc517f0c694a799c5d03740efd4d6, type: 3}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: cd6af994-15eb-4b2a-abf0-238a67fcbeb7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'player/Ability[/Keyboard/e]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2080847073806882331}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872293068396383832, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Seeker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3034150972484353642, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1906201369626329652, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 2080847073806882331}
+  m_SourcePrefab: {fileID: 100100000, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+--- !u!1 &2287592702743669522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1906201369626329652, guid: 7ab1a27816b7241148dd768cf0a5ac03, type: 3}
+  m_PrefabInstance: {fileID: 417455405312977190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2080847073806882331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287592702743669522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaf48a0eb5cf4fa58ab7abc999d69ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seeker
+  moveSpeed: 5
