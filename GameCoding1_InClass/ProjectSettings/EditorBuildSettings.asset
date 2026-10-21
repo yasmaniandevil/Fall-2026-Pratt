@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Week7_Loops/Week7.unity
     guid: 121401cc02dc82841ab8d8c157669384
+  - enabled: 1
+    path: Assets/Week9_Classes/Week9_Classes.unity
+    guid: 0b93398d38d203949830a98d1e23149f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 26eb7c33d539c488b92b5e5e9511ae47, type: 2}
