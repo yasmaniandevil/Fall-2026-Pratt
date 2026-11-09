@@ -18,7 +18,7 @@ public class Chore : MonoBehaviour
 
     public TextMeshPro eText;
 
-    // Unity calls this automatically when something walks INTO the trigger
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -33,7 +33,7 @@ public class Chore : MonoBehaviour
         }
     }
 
-    // Unity calls this automatically when something walks OUT of the trigger
+    
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
