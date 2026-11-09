@@ -56,8 +56,12 @@ public class StatMeter : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-    
 
+
+    public float GetValue()
+    {
+        return currentValue;
+    }
     // Other scripts call this to change the stat.
     // A positive number refills it (eating food: ChangeStat(10)).
     // A negative number takes some away (a plant wilts: ChangeStat(-15)).

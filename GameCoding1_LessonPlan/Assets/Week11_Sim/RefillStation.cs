@@ -20,15 +20,16 @@ public class RefillStation : MonoBehaviour
 
     bool playerIsHere = false;   // is the player standing in the trigger?
     bool isRefilling = false;    // is a refill already happening? (stops E spam)
-    public TextMeshProUGUI eText;
+    public TextMeshPro eText;
 
-
+    Wallet playerWallet;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             playerIsHere = true;
             eText.enabled = true;
+            playerWallet = other.GetComponent<Wallet>();
         }
     }
 
@@ -48,6 +49,10 @@ public class RefillStation : MonoBehaviour
         // All three have to be true: player is here, E was pressed, not already refilling.
         if (playerIsHere && Keyboard.current.eKey.isPressed&& !isRefilling)
         {
+            if (playerWallet != null)
+            {
+                playerWallet.SpendMoney(2);
+            }
             // Start the kitchen timer. Update keeps running while this happens.
             StartCoroutine(RefillOverTime());
         }
