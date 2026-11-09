@@ -17,6 +17,8 @@ public class RefillStation : MonoBehaviour
     private bool isRefilling = false; //is a refill already happening? so you cant refill forever unlimited times
     public TextMeshProUGUI eText; //text pops up to press E
 
+    private Wallet playerWallet; 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //debug here says enter trigg
@@ -25,6 +27,7 @@ public class RefillStation : MonoBehaviour
             //debug here that says player in trigger
             playerIsHere = true;
             eText.enabled = true; //enabled is for UI its like set active but you turn off just the text component
+            playerWallet = collision.GetComponent<Wallet>();
         }
     }
 
@@ -43,6 +46,10 @@ public class RefillStation : MonoBehaviour
         //all three have to be true for the coroutine to start and refill the meter
         if(playerIsHere && Keyboard.current.eKey.isPressed && !isRefilling)
         {
+            if(playerWallet != null)
+            {
+                playerWallet.SpendMoney(2);
+            }
             StartCoroutine(RefillOverTime());
         }
     }

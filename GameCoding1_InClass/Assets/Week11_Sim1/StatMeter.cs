@@ -44,6 +44,14 @@ public class StatMeter : MonoBehaviour
         
     }
 
+    //no void so it has to return something
+    //it is going to return a float
+    //currentValue of the statmeter 
+    public float GetValue()
+    {
+        return currentValue;
+    }
+
     //needs to be public for otgher scripts
     //a posi number refills it (changestat(10)
     //a -# takes some away (ex: plant starts to die ChangeStat(-15)
