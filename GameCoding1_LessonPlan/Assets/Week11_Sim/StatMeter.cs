@@ -23,7 +23,7 @@ public class StatMeter : MonoBehaviour
     void Start()
     {
         // Every level starts with a full stat.
-        currentValue = maxValue;
+        //currentValue = maxValue;
 
         // Tell the slider what "full" means, so the bar matches our numbers.
         slider.maxValue = maxValue;
@@ -39,7 +39,7 @@ public class StatMeter : MonoBehaviour
         // Multiplying by Time.deltaTime (the seconds since the last frame)
         // turns "per frame" into "per second", so the drain is the same
         // speed on a slow laptop and a fast gaming PC.
-        currentValue -= drainRate * Time.deltaTime;
+        //currentValue -= drainRate * Time.deltaTime;
 
         // Mathf.Clamp keeps a number between a minimum and a maximum.
         // Here: never below 0, never above maxValue.
@@ -47,6 +47,8 @@ public class StatMeter : MonoBehaviour
 
         // Show the new value on the slider.
         slider.value = currentValue;
+        Debug.Log(currentValue);
+        
 
         // If the stat ran out, the player loses: restart this level.
         if (currentValue <= 0f)
